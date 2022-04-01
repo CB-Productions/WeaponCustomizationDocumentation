@@ -4,8 +4,8 @@ This is the documentation for the [Weapon Loadout and Customization](https://www
 
 ### Changelog and future Updates
 
-- [ ] Coming soon: More weapon assets
 - [x] 1.0 Release
+
 
 ## Getting Started
 
@@ -20,7 +20,31 @@ Inside the `WeaponCustomization` folder there are several important sub-folders:
 | Blueprints | Files for the core functionality |
 | DataAssets | Contains all the DataAssets for Weapons and Weapon Attachments |
 | UI | Contains all the UMG widgets that are used |
-| WeaponAssets | Contains all the assets (meshes, textures, materials) | 
+| WeaponAssets | Contains all the assets (meshes, textures, materials) |
+
+## Adding new attachments
+
+### Requirements
+
+Make sure 
+
+### DataAsset Integration
+
+New attachments can be added by simply creating a new DataAsset or copying an exising DataAssets and modifying it. For demonstration purposes we create a new sight attachment: 
+
+- Create a copy of the `DA_AimpointSight` DataAsset located within the `WeaponCustomization/DataAssets/Attachments` folder and open it 
+- Assign the new static mesh and make sure to update all the information like Name, Descriptions and Pros & Cons
+
+![Image](img/sight.png)
+
+As a final step the new attachment needs to be added to the weapon. It needs to be every weapon individually. We are adding the new sight to the M4: 
+
+- Open the `DA_M4` DataAsset within the `WeaponCustomization/DataAssets/Weapons` folder
+- Add a new entry to the `Available Attachments` variable and select the newly created DataAsset
+
+![Image](img/m4.png)
+
+**Important:** We are done now at this point. The UI will update automatically. Adding the new DataAsset is all that is required.
 
 ## Integration into another Project
 
@@ -30,7 +54,7 @@ In this example we will integrate the system into the default UE4 First Person T
 
 Depending on the project you want to integrate this with, the steps will slightly differ. If your project has a dedicated weapon Blueprint we advise to implement the component in there. The UE4 First Person Template doesn't have a dedicated weapon Blueprint, but rather puts the weapon mesh directly onto the player character. So first open the `FirstPersonCharacter` Blueprint. Add the `BP_WeaponComponent` and make it a child of the existing `FP_Gun` component:
 
-![Image](img/component.png)
+![Image](img/component_to_add.png.png)
 
 Select the `FP_Gun` component and within the Details panel set *Visible* to false, so that the original weapon does not show in-game. You can adjust the position of the `Mesh1P` component to better fit the weapon. Press Play and the last selected weapon, including all the attachments will now show up:
 
