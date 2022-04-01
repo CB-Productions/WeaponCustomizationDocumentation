@@ -2,36 +2,31 @@
 
 This is the documentation for the [Weapon Loadout and Customization](https://www.unrealengine.com/marketplace/en-US/profile/CB+Productions?count=20&sortBy=effectiveDate&sortDir=DESC&start=0) available on the UE4 Marketplace.
 
-### Getting Started
+### Changelog and future Updates
 
-![Image](component.PNG)
+- [] Coming soon: More weapon assets
+- [x] 1.0 Release
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Getting Started
 
-```markdown
-Syntax highlighted code block
+### Folder structure
 
-# Header 1
-## Header 2
-### Header 3
+The asset comes with two folders. The folder `WeaponCustomization` contains the core funcationality. The folder `FirstPersonExample` contains the default UE4 First Person Template to showcase how to integrate the System into your own project. If you don't require this example, you can simply delete this folder.
 
-- Bulleted
-- List
+Inside the `WeaponCustomization` folder there are several important sub-folders:
 
-1. Numbered
-2. List
+| Folder | Description |
+| --- | --- |
+| Blueprints | Files for the core functionality |
+| DataAssets | Contains all the DataAssets for Weapons and Weapon Attachments |
+| UI | Contains all the UMG widgets that are used |
+| WeaponAssets | Contains all the assets (meshes, textures, materials) | 
 
-**Bold** and _Italic_ and `Code` text
+## Integration into another Project
 
-[Link](url) and ![Image](src)
-```
+The integration into another project is kept simple. For a basic integration only one component needs to be added to the existing weapon or character class.
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+In this example we will integrate 
 
-### Jekyll Themes
+![Image](img/component.PNG)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/CB-Productions/WeaponCustomizationDocumentation/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
