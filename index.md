@@ -4,7 +4,7 @@ This is the documentation for the [Weapon Loadout and Customization](https://www
 
 ### Changelog and future Updates
 
-- [] Coming soon: More weapon assets
+- [ ] Coming soon: More weapon assets
 - [x] 1.0 Release
 
 ## Getting Started
@@ -26,7 +26,16 @@ Inside the `WeaponCustomization` folder there are several important sub-folders:
 
 The integration into another project is kept simple. For a basic integration only one component needs to be added to the existing weapon or character class.
 
-In this example we will integrate 
+In this example we will integrate the system into the default UE4 First Person Template. This is already done in the project itself, so feel free to check out the implementation yourself.
 
-![Image](img/component.PNG)
+Depending on the project you want to integrate this with, the steps will slightly differ. If your project has a dedicated weapon Blueprint we advise to implement the component in there. The UE4 First Person Template doesn't have a dedicated weapon Blueprint, but rather puts the weapon mesh directly onto the player character. So first open the `FirstPersonCharacter` Blueprint. Add the `BP_WeaponComponent` and make it a child of the existing `FP_Gun` component:
 
+![Image](img/component.png)
+
+Select the `FP_Gun` component and within the Details panel set *Visible* to false, so that the original weapon does not show in-game. You can adjust the position of the `Mesh1P` component to better fit the weapon. Press Play and the last selected weapon, including all the attachments will now show up:
+
+![Image](img/fp_example.png)
+
+The project comes already implemented. Additonaly, it allows easily customizing the weapon by returning to the main menu by pressing the M key:
+
+![Image](img/showcase.gif)
