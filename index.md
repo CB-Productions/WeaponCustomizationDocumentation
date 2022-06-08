@@ -57,3 +57,11 @@ Select the `FP_Gun` component and within the Details panel set *Visible* to fals
 The project comes already implemented. Additionally, it allows easily customizing the weapon by returning to the main menu by pressing the M key:
 
 ![Image](img/showcase.gif)
+
+This implementation is simply done by loading the main level: 
+
+![image](img/load_level.png)
+
+## Questions? 
+
+For any further questions join the [Discord server](https://discord.gg/3xc2u3tr9V) or write us an email: support [at] cb-productions.de
